@@ -8,7 +8,7 @@ export async function uploadToS3(formData:FormData) {
     const s3Client = new S3Client({
         region: 'eu-north-1',
         credentials:{
-            accessKeyId:process.env.AWS_ACCESS_KEY as string,
+            accessKeyId:process.env.AWS_ACCESS_KEY_TIME as string,
             secretAccessKey:process.env.AWS_SECRET_KEY_TIME as string,
         },
     });
@@ -22,7 +22,7 @@ export async function uploadToS3(formData:FormData) {
     }
 
     const buffer = Buffer.concat(chunks)
-    const bucket = process.env.AWS_BUCKET as string;
+    const bucket = process.env.AWS_BUCKET_TIME as string;
     await s3Client.send(new PutObjectCommand({
         Bucket: bucket,
         Key: newFileName, 
