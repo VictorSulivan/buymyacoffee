@@ -5,7 +5,7 @@ import { NextRequest } from "next/server";
 
 async function handler(req:NextRequest) {
     const data = await req.json();
-    await mongoose.connect(process.env.MONGODB_URL as string);
+    await mongoose.connect(process.env.MONGODB_URI as string);
     const {status, order_id} = data;
     if(status === 'paid'){
         await DonationModel.findByIdAndUpdate(data.order_id, {paid: true})
