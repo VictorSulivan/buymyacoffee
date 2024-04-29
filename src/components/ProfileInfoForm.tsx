@@ -20,19 +20,8 @@ export default function ProfileInfoForm({profileInfo}: Props){
     const [avatarUrl, setAvatarUrl] = useState(profileInfo?.avatarUrl); 
 
     async function handleFormAction(formData: FormData){
-        //const savePromise = new Promise<void>(async (resolve, reject) => {
              await saveProfile(formData);
              toast.success('Profile saved! ')
-            //resolve();
-       // });
-        //await  toast.promise(
-          //  savePromise,
-           // {
-                //loading: 'Saving...',
-                //success: <b>Profile saved!</b>,
-                //error: <b>Could not save.</b>,
-           // }
-        //);
     }
     
     return(

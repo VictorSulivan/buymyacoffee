@@ -16,7 +16,7 @@ export default function DonationStatus() {
             toast.success('Thanks for your donation!');
             setShowed(true);
         }
-    },[show])
+    },[show, showed])
     return(
         <>
         </>

@@ -34,6 +34,6 @@ button.crypto p{
   @apply text-xs leading-3;
 }
 
-button.amount.active{
+button.crypto.active{
   @apply border-yellow-300 bg-yellow-300/20 text-black;
 }

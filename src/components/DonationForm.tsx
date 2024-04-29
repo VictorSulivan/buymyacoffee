@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 
 
-export default function DonationForm ({email}:{email:string }):JSX.Element{
+export default function DonationForm ({email}:{email: string }):JSX.Element{
     const [numberInValue, setNumberInValue] = useState('');
     const [crypto, setCrypto] = useState('btc');
     const [amount, setAmount] = useState(1);
