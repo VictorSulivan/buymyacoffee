@@ -9,7 +9,7 @@ export async function uploadToS3(formData:FormData) {
         region: 'eu-north-1',
         credentials:{
             accessKeyId:process.env.AWS_ACCESS_KEY as string,
-            secretAccessKey:process.env.AWS_SECRET_KEY as string,
+            secretAccessKey:process.env.AWS_SECRET_KEY_TIME as string,
         },
     });
     const ext = file.name.split('.').slice(-1)[0];
